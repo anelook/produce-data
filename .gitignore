@@ -3,3 +3,4 @@ build
 certificates
 node_modules
 .github
+.DS_Store

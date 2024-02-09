@@ -4,10 +4,12 @@ dotenv.config();
 
 export default async (onStream: (status: string) => void) => {
     try {
+        console.log('masto')
         const masto = await login({
             url: 'https://mastodon.social/',
             accessToken: process.env["mastodon.token"]
         });
+        console.log('masto')
 
         // Connect to the streaming api
         const stream = await masto.stream.streamPublicTimeline();

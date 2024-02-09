@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon",
     "build": "rimraf ./build && tsc",
-    "load-mastodon": "npm run build && node build/produce-mastodon.js",
+    "load-mastodon": "npm run build && node build/produce-mastodon3.js",
     "load-reviews": "npm run build && node build/produce-reviews.js"
   },
   "keywords": [],
@@ -23,6 +23,7 @@
   "dependencies": {
     "csv-parser": "^3.0.0",
     "dotenv": "^16.0.3",
+    "kafkajs": "^2.2.4",
     "masto": "^4.6.8",
     "node-rdkafka": "^2.14.0"
   }
