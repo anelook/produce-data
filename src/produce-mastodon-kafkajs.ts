@@ -11,9 +11,9 @@ const kafka = new Kafka({
     clientId: 'my-app',
     brokers: [process.env["kafka.uri"]],
     ssl: {
-        ca: [fs.readFileSync(path.resolve(__dirname, process.env["ssl.ca.location"]))],
-        key: fs.readFileSync(path.resolve(__dirname, process.env["ssl.key.location"])),
-        cert: fs.readFileSync(path.resolve(__dirname, process.env["ssl.certificate.location"]))
+        ca: [fs.readFileSync(path.resolve(__dirname, process.env["ssl.ca.location"] || ''))],
+        key: fs.readFileSync(path.resolve(__dirname, process.env["ssl.key.location"] || '')),
+        cert: fs.readFileSync(path.resolve(__dirname, process.env["ssl.certificate.location"] || ''))
     },
 })
 
